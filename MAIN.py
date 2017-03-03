@@ -9,6 +9,9 @@ while running:
     playerHand = []
     for i in range(2):
         playerHand.extend([mainDeck.drawTopCard()])
+    playerValue = 0
     for i in playerHand:
         print(i.getPrintableName())
+        playerValue += i.getValue()
+    print("your current hand is worth "+str(playerValue))
     running = False
